@@ -1,0 +1,68 @@
+<div class="detail">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>Get Patient Details</mat-card-title>
+      <mat-card-subtitle>Scan/Enter details</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="form">
+        <mat-form-field class="full-width">
+          <mat-label>Patient ID</mat-label>
+          <input matInput placeholder="Enter Patient ID" [(ngModel)]="patientId" name="patientId" />
+        </mat-form-field>
+      </form>
+      <button mat-stroked-button color="primary" (click)="submit()">Submit</button> &nbsp;&nbsp; (or) &nbsp;&nbsp;
+      <button mat-stroked-button color="accent" (click)="scan()">Scan</button>
+    </mat-card-content>
+  </mat-card>
+  <button mat-button color="primary" (click)="cancel()" *ngIf="shouldScan" class="scan">Cancel Scan</button>
+  <div class="camera" *ngIf="shouldScan">
+    <zxing-scanner [formats]="['QR_CODE', 'EAN_13', 'CODE_128', 'DATA_MATRIX']" (scanSuccess)="onCodeResult($event)">
+    </zxing-scanner>
+  </div>
+  <div class="data" *ngIf="patientData">
+    <mat-card class="card2">
+      <mat-card-header>
+        <mat-card-title>Patient Details Found</mat-card-title>
+        <mat-card-subtitle>details</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <table class="mat-elevation-z2">
+          <tr>
+            <td>Name</td>
+            <td>{{patientData.name}}</td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>{{patientData.email}}</td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>
+              {{patientData.address.street}}<br />
+              {{patientData.address.suite}}<br />
+              {{patientData.address.city}}<br />
+              {{patientData.address.zipcode}}
+            </td>
+          </tr>
+          <tr>
+            <td>Phone number</td>
+            <td>{{patientData.phone}}</td>
+          </tr>
+          <tr>
+            <td>website</td>
+            <td>{{patientData.website}}</td>
+          </tr>
+          <tr>
+            <td>Company</td>
+            <td>
+              {{patientData.company .name}}
+              {{patientData.company.catchPhrase}}
+              {{patientData.company.bs}}
+            </td>
+          </tr>
+        </table>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
