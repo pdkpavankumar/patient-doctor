@@ -32,7 +32,11 @@ export class DetailComponent implements OnInit {
         name: 'Romaguera-Crona',
         catchPhrase: 'Multi-layered client-server neural-net',
         bs: 'harness real-time e-markets'
-      }
+      },
+      record: [
+        { date: '02-11-2020', medicine: ['Metformin', 'Amlodipine'] },
+        { date: '02-11-2020', medicine: ['Metoprolol', 'Omeprazole'] }
+      ]
     },
     {
       id: 26589,
@@ -55,7 +59,11 @@ export class DetailComponent implements OnInit {
         name: 'Deckow-Crist',
         catchPhrase: 'Proactive didactic contingency',
         bs: 'synergize scalable supply-chains'
-      }
+      },
+      record: [
+        { date: '11/02/2021', medicine: ['Metformin', 'Amlodipine'] },
+        { date: '22/02/2021', medicine: ['Metoprolol', 'Omeprazole'] }
+      ]
     },
     {
       id: 698852,
@@ -78,7 +86,11 @@ export class DetailComponent implements OnInit {
         name: 'Romaguera-Jacobson',
         catchPhrase: 'Face to face bifurcated interface',
         bs: 'e-enable strategic applications'
-      }
+      },
+      record: [
+        { date: '11/02/2021', medicine: ['Metformin', 'Amlodipine'] },
+        { date: '22/02/2021', medicine: ['Metoprolol', 'Omeprazole'] }
+      ]
     },
     {
       id: 569369,
@@ -101,7 +113,11 @@ export class DetailComponent implements OnInit {
         name: 'Robel-Corkery',
         catchPhrase: 'Multi-tiered zero tolerance productivity',
         bs: 'transition cutting-edge web services'
-      }
+      },
+      record: [
+        { date: '11/02/2021', medicine: ['Metformin', 'Amlodipine'] },
+        { date: '22/02/2021', medicine: ['Metoprolol', 'Omeprazole'] }
+      ]
     },
     {
       id: 63692,
@@ -124,7 +140,12 @@ export class DetailComponent implements OnInit {
         name: 'Keebler LLC',
         catchPhrase: 'User-centric fault-tolerant solution',
         bs: 'revolutionize end-to-end systems'
-      }
+      },
+      record: [
+        { date: '21/01/2021', medicine: ['Losartan', 'Albuterol'] },
+        { date: '11/02/2021', medicine: ['Metformin', 'Amlodipine'] },
+        { date: '22/02/2021', medicine: ['Metoprolol', 'Omeprazole'] }
+      ]
     }
   ];
   constructor(private snackBar: MatSnackBar) { }

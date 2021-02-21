@@ -15,6 +15,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DetailComponent } from './detail/detail.component';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
 import { MatTableModule } from '@angular/material/table';
+import { MatStepperModule } from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MatTableModule } from '@angular/material/table';
     FormsModule,
     MatSnackBarModule,
     ZXingScannerModule,
-    MatTableModule
+    MatTableModule,
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

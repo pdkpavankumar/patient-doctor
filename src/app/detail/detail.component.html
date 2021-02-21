@@ -61,6 +61,24 @@
               {{patientData.company.bs}}
             </td>
           </tr>
+          <tr>
+            <td>
+              Patient Records
+            </td>
+            <td>
+              <mat-vertical-stepper [linear]=false #stepper>
+                <mat-step *ngFor="let record of patientData.record">
+                  <ng-template matStepLabel>
+                    {{record.date}}
+                  </ng-template>
+                  <b><i>Ordered medicine:</i></b>
+                  <div *ngFor="let med of record.medicine">
+                    {{med}}
+                  </div>
+                </mat-step>
+              </mat-vertical-stepper>
+            </td>
+          </tr>
         </table>
       </mat-card-content>
     </mat-card>
